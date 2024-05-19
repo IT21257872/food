@@ -16,7 +16,7 @@ export default class FoodList extends Component {
       }
     
       retrieveaFoods() {
-        axios.get("http://localhost:5000/food").then((res) => {
+        axios.get("https://food-wmly.onrender.com/food").then((res) => {
           if (res.data.success) {
             this.setState({
               foods: res.data.existingFood,
@@ -38,7 +38,7 @@ export default class FoodList extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:5000/food").then((res) => {
+        axios.get("https://food-wmly.onrender.com/food").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingFood, searchkey);
           }

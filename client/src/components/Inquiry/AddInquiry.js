@@ -26,7 +26,7 @@ function AddInquiry() {
         const abc = { token: result };
     
         axios
-          .post("http://localhost:5000/register/view", abc)
+          .post("https://food-wmly.onrender.com/register/view", abc)
           .then((res) => {
             setId(res.data.userId);
             
@@ -54,7 +54,7 @@ function AddInquiry() {
                 userid
             }
 
-            await axios.post('http://localhost:5000/inquiry/add', newUserInquiry).then((res) => {
+            await axios.post('https://food-wmly.onrender.com/inquiry/add', newUserInquiry).then((res) => {
                 alert("Inquiry Added Successfully")
                 console.log(res.data)
                 // window.location.href = '/allinquiryuser'

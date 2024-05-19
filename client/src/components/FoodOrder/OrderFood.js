@@ -50,7 +50,7 @@ const Restration = (props)=>{
     const abc = { token: result };
 
     axios
-      .post("http://localhost:5000/register/view", abc)
+      .post("https://food-wmly.onrender.com/register/view", abc)
       .then(res => [
         setUserid(res.data.userId)
         
@@ -61,7 +61,7 @@ const Restration = (props)=>{
 
 
 
-      axios.get(`http://localhost:5000/food/${id}`).then(res => [
+      axios.get(`https://food-wmly.onrender.com/food/${id}`).then(res => [
         
         setFoodname(res.data.food.foodName),
         setQuantity(1),
@@ -106,7 +106,7 @@ const Restration = (props)=>{
       userid
     };
 
-    await axios.post("http://localhost:5000/foodorder/add", foodOrder)
+    await axios.post("https://food-wmly.onrender.com/foodorder/add", foodOrder)
     .then((res) => {
       alert("Order Successfull....! Enter your Delivery Location")
       window.location.href = "/food/addlocation";

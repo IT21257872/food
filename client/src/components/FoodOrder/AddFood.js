@@ -41,7 +41,7 @@ else{
        
    
        axios
-       .post("http://localhost:5000/food/admin/add",formData)
+       .post("https://food-wmly.onrender.com/food/admin/add",formData)
        .then(
         (res)=>setMessage(res.data))
         .catch((err)=>{

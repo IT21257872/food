@@ -42,7 +42,7 @@ else{
        
    
        axios
-       .put(`http://localhost:5000/food/admin/update/${id}`,formData)
+       .put(`https://food-wmly.onrender.com/food/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
@@ -59,7 +59,7 @@ else{
    useEffect(() => {
     axios
       .get(
-        `http://localhost:5000/food/${id}`
+        `https://food-wmly.onrender.com/food/${id}`
       )
       .then((res) =>
        [

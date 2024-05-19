@@ -30,7 +30,7 @@ function BookTable() {
     const abc = { token: result };
 
     axios
-      .post("http://localhost:5000/register/view", abc)
+      .post("https://food-wmly.onrender.com/register/view", abc)
       .then((res) => {
         setId(res.data.userId);
         
@@ -69,7 +69,7 @@ function BookTable() {
       
 
       await axios
-        .post("http://localhost:5000/tablebooking/add", booking)
+        .post("https://food-wmly.onrender.com/tablebooking/add", booking)
         .then((res) => {
           console.log(res.data);
           alert("Booking Added");

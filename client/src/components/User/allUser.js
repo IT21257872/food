@@ -11,7 +11,7 @@ function AllUser() {
 
 
     useEffect(() => {
-           axios.get('http://localhost:5000/register/all-user').then(res => {
+           axios.get('https://food-wmly.onrender.com/register/all-user').then(res => {
                setTables(res.data.users)
                console.log(res.data.users)
 
@@ -26,11 +26,11 @@ function AllUser() {
 
         const tableId = e.target.id;
 
-        axios.delete(`http://localhost:5000/register/delete/${tableId}`).then((res) => {
+        axios.delete(`https://food-wmly.onrender.com/register/delete/${tableId}`).then((res) => {
             console.log(res.data)
             alert('User Deleted')
 
-            axios.get('http://localhost:5000/register/all-user/').then(res => {
+            axios.get('https://food-wmly.onrender.com/register/all-user/').then(res => {
             setTables(res.data.users)
             console.log(res.data.users)
         })
@@ -45,7 +45,7 @@ function AllUser() {
         console.log(searchkey)
 
         const response = await axios.get(
-            'http://localhost:5000/register/all-user'
+            'https://food-wmly.onrender.com/register/all-user'
           );
         const  filteredPackages = response.data.users.filter((users) =>
             users.name.toLowerCase().includes(searchkey)

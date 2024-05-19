@@ -63,7 +63,7 @@ const reg =  async(e) => {
         return false;
     }
 
-    axios.post('http://localhost:5000/driver/reg', newUser).then((res)=>{
+    axios.post('https://food-wmly.onrender.com/driver/reg', newUser).then((res)=>{
         console.log(res.data)
         alert("Registration Success")
         window.location.replace("/login")
@@ -104,7 +104,7 @@ const reg =  async(e) => {
         password:passwordLog
       }
       
-      axios.post('http://localhost:5000/driver/login', login).then(res=>{
+      axios.post('https://food-wmly.onrender.com/driver/login', login).then(res=>{
         console.log(login)
               if(res.data.success){
                   alert("Successfull")

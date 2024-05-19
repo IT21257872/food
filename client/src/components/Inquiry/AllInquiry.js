@@ -8,7 +8,7 @@ function AllInquiry() {
     const [searchkey, setsearchkey] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/inquiry/').then(res => {
+        axios.get('https://food-wmly.onrender.com/inquiry/').then(res => {
             setInquiries(res.data)
             console.log(res.data)
         })
@@ -17,7 +17,7 @@ function AllInquiry() {
     const filterInquiries = async (e) => {
         console.log(searchkey)
         const response = await axios.get(
-            'http://localhost:5000/inquiry/'
+            'https://food-wmly.onrender.com/inquiry/'
         );
         const filteredInquiries = response.data.filter((inquiries) =>
             inquiries.name.toLowerCase().includes(searchkey)

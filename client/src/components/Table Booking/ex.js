@@ -9,7 +9,7 @@ export default function Posts() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/table/`)
+        axios.get(`https://food-wmly.onrender.com/table/`)
             .then((response) => {
                 setAPIData(response.data);
             })

@@ -33,14 +33,14 @@ function MyInquiries() {
         const abc = {token:result}
         
         
-        axios.post('http://localhost:5000/register/view', abc).then(res=>{
+        axios.post('https://food-wmly.onrender.com/register/view', abc).then(res=>{
            
             
                 setId(res.data.userId)
                 console.log(res.data.userId)
                 const ids = res.data.userId
         
-        axios.get(`http://localhost:5000/inquiry/book/${ids}`).then(res => {
+        axios.get(`https://food-wmly.onrender.com/inquiry/book/${ids}`).then(res => {
          
          if(res.data.length != 0){
               setInquiries(res.data)
@@ -71,7 +71,7 @@ function MyInquiries() {
 
         const inquiryId = e.target.id;
 
-        axios.delete(`http://localhost:5000/inquiry/${inquiryId}`).then((res) => {
+        axios.delete(`https://food-wmly.onrender.com/inquiry/${inquiryId}`).then((res) => {
             console.log(res.data)
             alert('Inquiry Deleted Successfully')
             window.location.reload()
